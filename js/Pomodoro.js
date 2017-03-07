@@ -147,7 +147,6 @@ function resetTimers() {
 	clearInterval(currentBreakTime);
 	workTotalSeconds = parseInt(workDisplay) * 60;
 	breakTotalSeconds = parseInt(breakDisplay) * 60;
-	console.log(workTotalSeconds);
 	
 	//This section resets the Work Session timer to its received input or to default of "25" if it received no input from user
 	workDisplay = originalWorkTime;	
