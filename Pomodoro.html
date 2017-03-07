@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Pomodoro Clock</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+      integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+      <link rel="stylesheet" href="css/pomodoroStyles.css" />
+      <link href='https://fonts.googleapis.com/css?family=Orbitron:400,700' rel='stylesheet' type='text/css'>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  </head>
+  <body>
+      <div class="container-fluid">
+          <div class="row" id="titleRow">
+              <div class="col-md-3 col-xs-3"></div>
+              <div class="col-md-6 col-xs-6 text-center"><p>Star Wars Pomodoro Clock</p></div>
+              <div class="col-md-3 col-xs-3"></div>
+          </div>
+          <div class="row" id="controlsRow">
+              <div class="col-md-2 col-xs-2"></div>
+              <div class="col-md-8 col-xs-8">
+                  <div class="row text-center">
+                      <div class="col-md-2 col-xs-2"></div>
+                      <div class="col-md-3">
+                          <div class="row timeTitle">
+                            <div class="col-md-12 col-xs-12">Work Interval</div>
+                          </div>
+                          <button id="workPlus" type="button" class="btn btn-primary">+ Work</button>
+                          <div class="timeDisplay" id="workDisplay"></div>
+                          <button id="workMinus" type="button" class="btn btn-primary">- Work</button>
+                      </div>
+                      <div class="col-md-2 col-xs-2"></div>
+                      <div class="col-md-3" id="breakIntervalBlock">
+                          <div class="row timeTitle">Break Interval</div>
+                          <button id="breakPlus" type="button" class="btn btn-primary">+ Break</button>
+                          <div class="timeDisplay" id="breakDisplay"></div>
+                          <button id="breakMinus" type="button" class="btn btn-primary">- Break</button>
+                      </div>
+                      <div class="col-md-2 col-xs-2"></div>
+                  </div>
+              </div>
+              <div class="col-md-2 col-xs-2"></div>
+          </div>
+          <div class="row">
+              <div class="col-md-3 col-xs-1"></div>
+              <div class="col-md-6 col-xs-10 text-center" id="timerBox">
+                  <div class="col-md-3"><img src="img/galacticrepublic_logo.png" id="rebelLogo" width="125" height="auto"></div>
+                  <div class="col-md-6" id="timerDisplay">00:00</div>
+                  <div class="col-md-3"><img src="img/imperialLogo.png" id="empireLogo" width="125" height="auto"></div>
+              </div>
+              <div class="col-md-3 col-xs-1"></div>
+          </div>
+          <div class="row" id="playPauseRow">
+              <div class="col-md-2 col-xs-2"></div>
+              <div class="row center-block">
+                  <button id="resetButton" type="button" class="btn btn-primary col-md-2 col-xs-2">Reset</button>
+                  <div class="col-md-1 col-xs-1"></div>
+                  <button id="startButton" type="button" class="btn btn-primary col-md-2 col-xs-2">Start</button>
+                  <div class="col-md-1 col-xs-1"></div>
+                  <button id="pauseButton" type="button" class="btn btn-primary col-md-2 col-xs-2">Pause</button>
+              </div>
+              <div class="col-md-2 col-xs-2"></div>
+          </div>
+      </div>
+      <script src="js/Pomodoro.js" type="text/javascript"></script>
+      <script>
+          $(document).ready(function() {
+              $("#startButton").prop("disabled", false);
+              $("#workMinus").prop("disabled", false);
+              $("#breakMinus").prop("disabled", false);
+              $("#resetButton").prop("disabled", true);
+          });
+
+          $('#workPlus').click(function(){
+              addWorkTime();
+          });
+
+          $('#workMinus').click(function(){
+              minusWorkTime(workDisplay);
+          });
+
+          $('#breakPlus').click(function(){
+              addBreakTime(breakDisplay);
+          });
+
+          $('#breakMinus').click(function(){
+              minusBreakTime(breakDisplay);
+          });
+
+          $('#startButton').click(function(){
+              workCountdown();
+              $(this).prop("disabled", true);
+              $("#resetButton").prop("disabled", false);
+          });
+
+          $('#pauseButton').click(function(){
+              pauseTimers();
+              $("#startButton").prop("disabled", false);
+          });
+
+          $('#resetButton').click(function(){
+              resetTimers();
+              $("#startButton").prop("disabled", false);
+              $("#workMinus").prop("disabled", false);
+              $("#breakMinus").prop("disabled", false);
+          });
+      </script>
+  </body>
+</html>

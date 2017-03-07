@@ -1,0 +1,153 @@
+.container-fluid {
+	background: url('../img/deathstartexture.jpg');
+	height: 100%;
+}
+
+#titleRow {
+	font-family: 'Orbitron', sans-serif;
+	padding: 30px 0px;
+
+}
+
+#titleRow p {
+	color: #000000;
+	font-weight: bold;
+	font-size: 40px;
+}
+
+#controlsRow {
+	padding: 10px 0px 60px 0px;
+}
+
+.timeTitle {
+	font-family: 'Orbitron', sans-serif;
+	margin: 10px 20px;
+	font-size: 28px;
+	font-weight: bold;
+
+}
+
+.timeDisplay {
+	font-family: 'Orbitron', sans-serif;
+	margin: 20px 0px;
+	padding: 20px 0px;
+	font-size: 32px;
+	font-weight: bold;
+}
+
+#workDisplay {
+	font-family: 'Orbitron', sans-serif;
+}
+
+#playPauseRow {
+	padding: 60px 0px 50px 0px;
+}
+
+#timerBox {
+	font-family: 'Orbitron', sans-serif;
+	padding: 40px 0px;
+	font-size: 40px;
+	background-color: white;
+	color: #000000;
+	font-weight: bold;
+	border-radius: 10px;
+	border: 2px solid #333333;
+}
+
+#rebelLogo:hover {
+	background-color: #b20000;
+	border-radius: 50%;
+}
+
+#empireLogo:hover {
+	background-color: #32CD32;
+	border-radius: 50%;
+}
+
+#timerDisplay {
+	font-family: 'Orbitron', sans-serif;
+	padding: 50px 0px;
+	font-size: 50px;
+	background-color: white;
+	color: #000000;
+	font-weight: bold;
+
+}
+
+#workPlus {
+	font-family: 'Orbitron', sans-serif;
+	font-weight: bold;
+	font-size: 24px;
+	background-color: goldenrod;
+	border: none;
+	box-shadow: 2px 2px 1px #000000;
+	text-shadow: 2px 2px 2px #000000;
+}
+
+#workMinus {
+	font-family: 'Orbitron', sans-serif;
+	font-weight: bold;
+	font-size: 24px;
+	background-color: goldenrod;
+	border: none;
+	box-shadow: 2px 2px 1px #000000;
+	text-shadow: 2px 2px 2px #000000;
+}
+
+#breakPlus {
+	font-family: 'Orbitron', sans-serif;
+	font-weight: bold;
+	font-size: 24px;
+	background-color: goldenrod;
+	border: none;
+	box-shadow: 2px 2px 1px #000000;
+	text-shadow: 2px 2px 2px #000000;
+}
+
+#breakMinus {
+	font-family: 'Orbitron', sans-serif;
+	font-weight: bold;
+	font-size: 24px;
+	background-color: goldenrod;
+	border: none;
+	box-shadow: 2px 2px 1px #000000;
+	text-shadow: 2px 2px 2px #000000;
+}
+
+#resetButton {
+	font-family: 'Orbitron', sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+	background-color: #1b1a65;
+	border: none;
+	box-shadow: 2px 2px 1px #000000;
+	text-shadow: 2px 2px 2px #000000;
+}
+
+#startButton {
+	font-family: 'Orbitron', sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+	background-color: #1b1a65;
+	border: none;
+	box-shadow: 2px 2px 1px #000000;
+	text-shadow: 2px 2px 2px #000000;
+}
+
+#pauseButton {
+	font-family: 'Orbitron', sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+	background-color: #1b1a65;
+	border: none;
+	box-shadow: 2px 2px 1px #000000;
+	text-shadow: 2px 2px 2px #000000;
+}
+
+@media screen and (max-width: 600px) {
+
+	#breakIntervalBlock {
+		margin-top: 40px;
+	}
+
+}
